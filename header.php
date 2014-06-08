@@ -34,7 +34,7 @@
   <body <?php body_class(); ?>>
   <?php do_action('foundationPress_after_body'); ?>
   
-  <div class="off-canvas-wrap">
+  <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
   
   <?php do_action('foundationPress_layout_start'); ?>
@@ -53,27 +53,30 @@
   <aside class="left-off-canvas-menu">
     <?php foundationPress_mobile_off_canvas(); ?>
   </aside>
+</div>
+	  </div>
   
-        <div class="top-bar-container contain-to-grid show-for-medium-up">
-            <nav class="top-bar" data-topbar="">
-                <ul class="title-area">
-                    <li class="name">
-                        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-                    </li>          
-                </ul>
-                <section class="top-bar-section">
-                    <?php foundationPress_top_bar_l(); ?>
-                    <?php foundationPress_top_bar_r(); ?>
-                </section>
-            </nav>
-        </div>
-
-<header class="row" role="banner">
-  <div class="small-12 columns">
-    <h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-    <h4 class="subheader"><?php bloginfo('description'); ?></h4>
-    <hr/>
-  </div>
+<header role="banner">
+	<div class="row">
+		<div class="small-12 columns show-for-medium-up">
+			<a href="http://www.dwr.com" target="_blank" class="right button" id="shop-dwr">Shop dwr.com &#9656;</a>
+		</div>
+	</div>
+	<div class="row">
+		<div id="logo" class="small-offset-1 medium-offset-0 small-11 medium-4 columns">
+			<h1 class="left">
+				<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>"><img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/dwr-logo.png"></a>
+			</h1>
+			<h2 class="subheader"><?php bloginfo( 'name' ); ?></h2>
+			<h3 class="subheader"><?php bloginfo('description') ?></h3>
+		</div>
+		<div id="desktop-menu" class="medium-4 columns show-for-medium-up">
+			<?php foundationPress_main_menu() ?>
+		</div>
+		<div id="desktop-search" class="medium-4 columns show-for-medium-up">
+			<?php get_search_form(); ?>
+		</div>
+	</div>
 </header>
 
 <section class="container" role="document">

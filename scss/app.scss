@@ -1,3 +1,5 @@
+@import "../assets/fonts/news-gothic/MyFontsWebfontsKit.css";
+
 /* Global config */
 @import "config/variables"; // Your custom variables
 @import "config/colors"; // Your custom color scheme
@@ -8,3 +10,99 @@
 
 /* Site structure */
 @import "site/structure"; // Your site structure
+
+header[role=banner] {
+  margin-bottom: 60px;
+  #logo {
+	img {
+	  width: 135px;
+	  height: auto;
+	  margin-right: 10px;
+	}
+  }
+  .subheader {
+	font-size: 15px;
+	color: $primary-color;
+	line-height: 1rem;
+  }
+  h2 {
+	font-family: NewsGothicBT-Bold;
+	text-transform: uppercase;
+	margin-top: 20px;
+  }
+  #desktop-menu {
+	margin-top: 58px;
+	a {
+	  color: $primary-color;
+	  font-family: NewsGothicBT-Bold;
+	  font-size: 18px;
+	}
+  }
+  #desktop-search {
+	margin-top: 58px;
+  }
+
+}
+
+#shop-dwr {
+  background-color: $primary-color;
+  font-family: NewsGothicBT-Bold;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1em;
+  margin: 0;
+}
+
+#searchform {
+  input {
+	display: inline-block;
+	width: 16px;
+	height: 24px;
+	box-shadow: none;
+	padding: 7px 0 6px 24px;
+	background: url('../assets/img/icons/icon-search.png') no-repeat 4px;
+	background-size: 16px 16px;
+	background-color: #FFF;
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	outline: none;
+	border: none;
+	font-size: 11px;
+	line-height: normal;
+	-webkit-transition: 0.4s ease-in-out all;
+	-moz-transition: 0.4s ease-in-out all;
+	-ms-transition: 0.4s ease-in-out all;
+	-o-transition: 0.4s ease-in-out all;
+	transition: 0.4s ease-in-out all;
+  }
+  input:focus {
+	width: 182px;
+	background-color: $secondary-color;
+	cursor: auto;
+  }
+}
+
+
+article {
+  .featured-story {
+	font-family: NewsGothicBT-Bold;
+	text-transform: uppercase;
+	color: $body-font-color;
+	font-size: 15px;
+  }
+  .category {
+	margin: 0;
+	padding: 0;
+	h3 {
+	  text-transform: uppercase;
+	  font-family: NewsGothicBT-Bold;
+	  font-size: 15px;
+	}
+  }
+  .more-link {
+	text-transform: uppercase;
+	font-family: NewsGothicBT-Bold;
+  }
+}

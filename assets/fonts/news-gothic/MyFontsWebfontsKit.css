@@ -1,0 +1,70 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2819679, 2014-05-28T15:57:53-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: News Gothic by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/news-gothic/
+ * 
+ * Webfont: News Gothic Italic by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/italic/
+ * 
+ * Webfont: News Gothic Bold by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/bold/
+ * 
+ * Webfont: News Gothic Bold Italic by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/bold-italic/
+ * 
+ * Webfont: News Gothic Light by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/light/
+ * 
+ * Webfont: News Gothic Light Italic by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/light-italic/
+ * 
+ * Webfont: News Gothic Demi by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/demi/
+ * 
+ * Webfont: News Gothic Demi Italic by Bitstream
+ * URL: http://www.myfonts.com/fonts/bitstream/news-gothic/demi-italic/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2819679
+ * Licensed pageviews: 5,000,000
+ * Webfonts copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2b065f");
+
+  
+@font-face {font-family: 'NewsGothicBT-Roman';src: url('webfonts/2B065F_0_0.eot');src: url('webfonts/2B065F_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_0_0.woff') format('woff'),url('webfonts/2B065F_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NewsGothicBT-Italic';src: url('webfonts/2B065F_1_0.eot');src: url('webfonts/2B065F_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_1_0.woff') format('woff'),url('webfonts/2B065F_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NewsGothicBT-Bold';src: url('webfonts/2B065F_2_0.eot');src: url('webfonts/2B065F_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_2_0.woff') format('woff'),url('webfonts/2B065F_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NewsGothicBT-BoldItalic';src: url('webfonts/2B065F_3_0.eot');src: url('webfonts/2B065F_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_3_0.woff') format('woff'),url('webfonts/2B065F_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NewsGothicBT-Light';src: url('webfonts/2B065F_4_0.eot');src: url('webfonts/2B065F_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_4_0.woff') format('woff'),url('webfonts/2B065F_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NewsGothicBT-LightItalic';src: url('webfonts/2B065F_5_0.eot');src: url('webfonts/2B065F_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_5_0.woff') format('woff'),url('webfonts/2B065F_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NewsGothicBT-Demi';src: url('webfonts/2B065F_6_0.eot');src: url('webfonts/2B065F_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_6_0.woff') format('woff'),url('webfonts/2B065F_6_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'NewsGothicBT-DemiItalic';src: url('webfonts/2B065F_7_0.eot');src: url('webfonts/2B065F_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B065F_7_0.woff') format('woff'),url('webfonts/2B065F_7_0.ttf') format('truetype');}
+ 
