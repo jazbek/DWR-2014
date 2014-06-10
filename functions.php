@@ -29,4 +29,15 @@ require_once('library/enqueue-scripts.php');
 // Add theme support
 require_once('library/theme-support.php');
 
+/**
+ * @param int $columns
+ *
+ * @return bool
+ */
+function dwr_new_row( $columns = 3, $offset = 0 ) {
+	global $wp_query;
+	$current_iteration = $wp_query->current_post + 1;
+	return ( $current_iteration != $offset && ( $current_iteration != $wp_query->post_count ) && ( ( $current_iteration - $offset ) % $columns ) == 0);
+}
+
 ?>

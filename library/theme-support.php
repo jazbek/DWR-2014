@@ -10,6 +10,7 @@ function FoundationPress_theme_support() {
     add_theme_support('post-thumbnails');
     // set_post_thumbnail_size(150, 150, false);
 	add_image_size( 'large', 1066, 662, true );
+	add_image_size( 'medium', 640, 397, true );
 
     // rss thingy
     add_theme_support('automatic-feed-links');

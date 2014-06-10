@@ -92,17 +92,40 @@ article {
 	color: $body-font-color;
 	font-size: 15px;
   }
-  .category {
-	margin: 0;
-	padding: 0;
-	h3 {
-	  text-transform: uppercase;
-	  font-family: NewsGothicBT-Bold;
-	  font-size: 15px;
-	}
+  h2 {
+	font-size: 24px;
+  }
+  h3.category {
+	text-transform: uppercase;
+	font-family: NewsGothicBT-Bold;
+	font-size: 15px;
+  }
+  p {
+	font-size: 15px;
   }
   .more-link {
 	text-transform: uppercase;
 	font-family: NewsGothicBT-Bold;
   }
+  &.category-architecture {
+	> h3.category {
+	  background-color: #2fbac9;
+	  margin-bottom: 2px;
+	  padding: 15px 10px;
+	  line-height: 11px;
+	  a {
+		color: #FFF;
+		font-size: 15px;
+
+	  }
+	}
+	.entry-content {
+	  h3.category {
+		a {
+			color: #2fbac9;
+		}
+	  }
+	}
+  }
 }
+
