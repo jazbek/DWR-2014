@@ -51,7 +51,7 @@ $body-font-family: "NewsGothicBT-Roman";
 // We use these to control text direction settings
 // $text-direction: ltr;
 // $opposite-direction: right;
-// $default-float: left;
+//$default-float: left;
 
 // We use these as default colors throughout
 $primary-color: #323232;
@@ -774,14 +774,14 @@ $global-radius: 0px;
 // $pagination-margin: rem-calc(-5);
 
 // We use these to set the list-item properties
-// $pagination-li-float: $default-float;
+//$pagination-li-float: $default-float;
 // $pagination-li-height: rem-calc(24);
 // $pagination-li-font-color: #222;
 // $pagination-li-font-size: rem-calc(14);
 // $pagination-li-margin: rem-calc(5);
 
 // We use these for the pagination anchor links
-// $pagination-link-pad: rem-calc(1 10 1);
+$pagination-link-pad: rem-calc(1 5 1);
 // $pagination-link-font-color: #999;
 // $pagination-link-active-bg: scale-color(#fff, $lightness: -10%);
 
@@ -1168,7 +1168,7 @@ $global-radius: 0px;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #FFF;
+//$topbar-bg-color: #FFF;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin

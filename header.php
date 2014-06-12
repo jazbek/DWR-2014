@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
-    
+	  <link rel="stylesheet" href="http://i.icomoon.io/public/temp/4ac533c171/UntitledProject1/style.css">
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>

@@ -12,34 +12,34 @@
 @import "site/structure"; // Your site structure
 
 header[role=banner] {
-  margin-bottom: 60px;
+  margin-bottom: rem-calc(60px);
   #logo {
 	img {
-	  width: 135px;
+	  width: rem-calc(135px);
 	  height: auto;
-	  margin-right: 10px;
+	  margin-right: rem-calc(10px);
 	}
   }
   .subheader {
-	font-size: 15px;
+	font-size: rem-calc(15px);
 	color: $primary-color;
-	line-height: 1rem;
+	line-height: 1em;
   }
   h2 {
 	font-family: NewsGothicBT-Bold;
 	text-transform: uppercase;
-	margin-top: 20px;
+	margin-top: rem-calc(20px);
   }
   #desktop-menu {
-	margin-top: 58px;
+	margin-top: rem-calc(58px);
 	a {
 	  color: $primary-color;
 	  font-family: NewsGothicBT-Bold;
-	  font-size: 18px;
+	  font-size: rem-calc(18px);
 	}
   }
   #desktop-search {
-	margin-top: 58px;
+	margin-top: rem-calc(58px);
   }
 
 }
@@ -48,8 +48,8 @@ header[role=banner] {
   background-color: $primary-color;
   font-family: NewsGothicBT-Bold;
   text-transform: uppercase;
-  padding: 8px 12px;
-  font-size: 12px;
+  padding: rem-calc(8px 12px);
+  font-size: rem-calc(12px);
   line-height: 1em;
   margin: 0;
 }
@@ -57,19 +57,19 @@ header[role=banner] {
 #searchform {
   input {
 	display: inline-block;
-	width: 16px;
-	height: 24px;
+	width: rem-calc(16px);
+	height: rem-calc(24px);
 	box-shadow: none;
-	padding: 7px 0 6px 24px;
+	padding: rem-calc(7px 0 6px 24px);
 	background: url('../assets/img/icons/icon-search.png') no-repeat 4px;
-	background-size: 16px 16px;
+	background-size: rem-calc(16px 16px);
 	background-color: #FFF;
 	position: absolute;
 	cursor: pointer;
 	right: 0;
 	outline: none;
 	border: none;
-	font-size: 11px;
+	font-size: rem-calc(11px);
 	line-height: normal;
 	-webkit-transition: 0.4s ease-in-out all;
 	-moz-transition: 0.4s ease-in-out all;
@@ -78,7 +78,7 @@ header[role=banner] {
 	transition: 0.4s ease-in-out all;
   }
   input:focus {
-	width: 182px;
+	width: rem-calc(182px);
 	background-color: $secondary-color;
 	cursor: auto;
   }
@@ -90,18 +90,18 @@ article {
 	font-family: NewsGothicBT-Bold;
 	text-transform: uppercase;
 	color: $body-font-color;
-	font-size: 15px;
+	font-size: rem-calc(15px);
   }
   h2 {
-	font-size: 24px;
+	font-size: rem-calc(24px);
   }
   h3.category {
 	text-transform: uppercase;
 	font-family: NewsGothicBT-Bold;
-	font-size: 15px;
+	font-size: rem-calc(15px);
   }
   p {
-	font-size: 15px;
+	font-size: rem-calc(15px);
   }
   .more-link {
 	text-transform: uppercase;
@@ -110,12 +110,12 @@ article {
   &.category-architecture {
 	> h3.category {
 	  background-color: #2fbac9;
-	  margin-bottom: 2px;
-	  padding: 15px 10px;
-	  line-height: 11px;
+	  margin-bottom: rem-calc(2px);
+	  padding: rem-calc(15px 10px);
+	  line-height: rem-calc(11px);
 	  a {
 		color: #FFF;
-		font-size: 15px;
+		font-size: rem-calc(15px);
 
 	  }
 	}
@@ -129,3 +129,54 @@ article {
   }
 }
 
+ul.pagination {
+  font-family: NewsGothicBT-Demi;
+  font-size: rem-calc(24px);
+  color: #999;
+  li {
+	&.current {
+	  a {
+		color: #000;
+		background-color: transparent;
+	  }
+	}
+  }
+}
+
+.social-feeds {
+  .AlpinePhotoTiles-tile {
+	margin: 0 !important;
+	width: auto !important;
+  }
+  .AlpinePhotoTiles-image-div-container {
+	a {
+	  width: 161px !important;
+	  height: 161px !important;
+	  margin-right: 25px !important;
+	  margin-left: 0px;
+	}
+  }
+  .AlpinePhotoTiles_cascade_column_inner {
+	width: 161px;
+	height: 161px;
+	margin-left: 25px !important;
+	margin-right: 0px;
+	img {
+	  width: 100%;
+	  height: auto;
+	}
+  }
+}
+
+footer {
+  h5 {
+	font-size: rem-calc(18px);
+	font-family: NewsGothicBT-Bold;
+  }
+  .social {
+	ul {
+	  font-size: rem-calc(15px);
+	  color: #ccc;
+	}
+  }
+}

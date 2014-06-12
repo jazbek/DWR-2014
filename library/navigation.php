@@ -6,7 +6,8 @@
  */
 register_nav_menus(array(
     'main-menu' => 'Main Menu',
-    'mobile-off-canvas' => 'Mobile'
+    'mobile-off-canvas' => 'Mobile',
+	'footer-menu' => 'Footer',
 ));
 
 
