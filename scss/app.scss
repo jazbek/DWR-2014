@@ -144,27 +144,30 @@ ul.pagination {
 }
 
 .social-feeds {
-  .AlpinePhotoTiles-tile {
-	margin: 0 !important;
-	width: auto !important;
-  }
-  .AlpinePhotoTiles-image-div-container {
-	a {
-	  width: 161px !important;
-	  height: 161px !important;
-	  margin-right: 25px !important;
-	  margin-left: 0px;
+  .AlpinePhotoTiles_cascade_column {
+	.AlpinePhotoTiles_cascade_column_inner {
+	  margin: 0 !important;
+	  height: 153px !important;
+	  width: 153px !important;
+	  background-color: #CCC;
+	  img {
+		position:absolute;
+		left: -100%;
+		right: -100%;
+		top: -100%;
+		bottom: -100%;
+		margin: auto !important;
+		min-height: 100%;
+		min-width: 100%;
+		max-width: 100000000px !important;
+	  }
 	}
   }
-  .AlpinePhotoTiles_cascade_column_inner {
-	width: 161px;
-	height: 161px;
-	margin-left: 25px !important;
-	margin-right: 0px;
-	img {
-	  width: 100%;
-	  height: auto;
+  .instagram {
+	  .AlpinePhotoTiles_cascade_column_inner {
+	  }
 	}
+  .tumblr {
   }
 }
 

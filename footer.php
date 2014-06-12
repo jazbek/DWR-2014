@@ -1,9 +1,20 @@
+</div>
+<?php if (is_front_page()) : ?>
+	<div class="social-feeds row collapse">
+		<div class="instagram small-12 medium-6 columns">
+			<hr>
+			<?php echo do_shortcode( '[alpine-phototile-for-instagram id=859 user="designwithinreach" src="user_recent" imgl="instagram" style="cascade" col="3" size="Th" num="3" align="left" max="100" nocredit="1"]' ); ?>
+		</div>
+		<div class="tumblr small-12 medium-6 columns">
+			<hr>
+			<?php echo do_shortcode( '[alpine-phototile-for-tumblr src="user" uid="designwithinreach" imgl="tumblr" style="cascade" col="3" size="240" num="3" align="right" max="100" nocredit="1"]' ); ?>
+		</div>
 	</div>
 <?php endif ?>
 
 <hr>
-		</div>
-	</section>
+</div>
+</section>
 
 <footer class="row collapse">
 	<?php do_action('foundationPress_before_footer'); ?>
@@ -41,9 +52,9 @@
 	<?php do_action('foundationPress_after_footer'); ?>
 </footer>
 <a class="exit-off-canvas"></a>
-	
-  <?php do_action('foundationPress_layout_end'); ?>
-  </div>
+
+<?php do_action('foundationPress_layout_end'); ?>
+</div>
 </div>
 <?php wp_footer(); ?>
 <?php do_action('foundationPress_before_closing_body'); ?>
