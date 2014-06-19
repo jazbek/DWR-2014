@@ -238,20 +238,22 @@ article {
 	}
 }
 
-ul.pagination {
-	font-family: NewsGothicBT-Demi;
-	font-size: rem-calc(24px);
-	color: #999;
-	li {
-		&.current {
-			a {
-				color: #000;
-				background-color: transparent;
+#post-nav {
+	margin: 40px 0;
+	ul.pagination {
+		font-family: NewsGothicBT-Demi;
+		color: #999;
+		li {
+			font-size: rem-calc(20px);
+			&.current {
+				a {
+					color: #000;
+					background-color: transparent;
+				}
 			}
 		}
 	}
 }
-
 .social-feeds {
 	margin-bottom: 75px;
 	hr {

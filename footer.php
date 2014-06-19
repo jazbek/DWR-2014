@@ -36,10 +36,11 @@
 		</div>
 	</div>
 <?php endif ?>
-<hr>
 </section>
 
 <footer class="row collapse">
+	<hr>
+
 	<?php do_action('foundationPress_before_footer'); ?>
 	<div class="small-12 medium-4 columns">
 		<?php
