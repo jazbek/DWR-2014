@@ -30,12 +30,84 @@
 
 // Insert styles here
 
+@media #{$small-only} {
+	/* Define mobile styles here */
+	#logo {
+		margin-left: 25px;
+		margin-top: 25px;
+	}
+	div[role=main] {
+		p.thumbnail {
+			margin-left: -0.9375rem;
+			margin-right: -0.9375rem;
+			text-align: center;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
 
 /**
  * 3.0 Content
  * ----------------------------------------------------------------------------
  */
 
+@media #{$small-only} {
+	/* Define mobile styles here */
+	article {
+		&.category-design {
+			> h3.category {
+				color: $design;
+			}
+			.entry-content {
+				h3.category {
+					a {
+						color: $design;
+					}
+				}
+			}
+		}
+		&.category-culture {
+			> h3.category {
+				background-color: $culture;
+			}
+			.entry-content {
+				h3.category {
+					a {
+						color: $culture;
+					}
+				}
+			}
+		}
+		&.category-people {
+			> h3.category {
+				background-color: $people;
+			}
+			.entry-content {
+				h3.category {
+					a {
+						color: $people;
+					}
+				}
+			}
+		}
+		&.category-architecture {
+			> h3.category {
+				background-color: $architecture;
+			}
+			.entry-content {
+				h3.category {
+					a {
+						color: $architecture;
+					}
+				}
+			}
+		}
+
+	}
+}
 
 /**
  * 3.1 Pages

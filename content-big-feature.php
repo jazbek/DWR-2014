@@ -6,15 +6,21 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class('small-12'); ?>>
-		<header>
+		<header class="show-for-medium-up">
 			<h3 class="featured-story">Featured Story: <?php the_date('M Y') ?></h3>
 		</header>
 		<div class="entry-content">
 			<p><?php the_post_thumbnail('large'); ?></p>
-			<div class="row">
+			<div class="row collapse">
 				<div class="small-12 medium-offset-4 medium-6 columns">
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<?php the_content(__('&#9656; Read More', 'FoundationPress')); ?>
+					<div class="row show-for-small-only">
+						<h3 class="category small-6 columns"><?php the_category(', '); ?></h3>
+						<h3 class="category small-6 columns text-right"><?php echo get_the_date(); ?></h3>
+					</div>
+					<div class="small-12 columns">
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<?php the_content(__('&#9656; Read More', 'FoundationPress')); ?>
+					</div>
 				</div>
 				<div class="show-for-medium-up medium-2 columns text-right">
 					<h3 class="category"><?php the_category(', ') ?></h3>

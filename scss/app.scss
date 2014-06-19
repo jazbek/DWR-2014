@@ -1,185 +1,356 @@
 @import "../assets/fonts/news-gothic/MyFontsWebfontsKit.css";
+@import "../assets/fonts/icomoon/style.css";
 
 /* Global config */
-@import "config/variables"; // Your custom variables
-@import "config/colors"; // Your custom color scheme
-@import "config/settings"; // Default settings file. Uncomment each setting you need to change
-
+@import "config/variables";
+// Your custom variables
+@import "config/colors";
+// Your custom color scheme
+@import "config/settings";
+// Default settings file. Uncomment each setting you need to change
 /* Foundation 5 */
-@import "foundation"; // Foundation 5 by Zurb
-
+@import "foundation";
+// Foundation 5 by Zurb
 /* Site structure */
-@import "site/structure"; // Your site structure
+@import "site/structure";
+// Your site structure
 
 header[role=banner] {
-  margin-bottom: rem-calc(60px);
-  #logo {
-	img {
-	  width: rem-calc(135px);
-	  height: auto;
-	  margin-right: rem-calc(10px);
+	margin-bottom: rem-calc(60px);
+	#logo {
+		img {
+			width: rem-calc(135px);
+			height: auto;
+			margin-right: rem-calc(10px);
+		}
 	}
-  }
-  .subheader {
-	font-size: rem-calc(15px);
-	color: $primary-color;
-	line-height: 1em;
-  }
-  h2 {
-	font-family: NewsGothicBT-Bold;
-	text-transform: uppercase;
-	margin-top: rem-calc(20px);
-  }
-  #desktop-menu {
-	margin-top: rem-calc(58px);
-	a {
-	  color: $primary-color;
-	  font-family: NewsGothicBT-Bold;
-	  font-size: rem-calc(18px);
+	.subheader {
+		font-size: rem-calc(15px);
+		color: $primary-color;
+		line-height: 1em;
 	}
-  }
-  #desktop-search {
-	margin-top: rem-calc(58px);
-  }
+	h2 {
+		font-family: NewsGothicBT-Bold;
+		text-transform: uppercase;
+		margin-top: rem-calc(20px);
+	}
+	#desktop-menu {
+		margin-top: rem-calc(58px);
+		li {
+			a {
+				color: $dark-grey;
+				font-family: NewsGothicBT-Bold;
+				font-size: rem-calc(18px);
+			}
+			&.current-menu-item {
+				border-bottom: 3px solid $dark-grey;
+			}
+		}
+	}
+	#desktop-search {
+		margin-top: rem-calc(58px);
+	}
 
+	.tab-bar {
+		right: 25px;
+	}
+}
+
+aside {
+	&.right-off-canvas-menu {
+		#searchform {
+			padding: 10px;
+			input[type=text] {
+				color: $body-font-color;
+				font-size: rem-calc(14px);
+				display: block;
+				width: 11rem;
+				height: auto;
+				box-shadow: none;
+				position: static;
+				padding: 0.375rem rem-calc(14px) 0.375rem 1.5rem;
+				background: url('../assets/img/icons/icon-search.png') no-repeat center right;
+				background-size: .7rem .7rem;
+				background-color: transparent;
+				-webkit-transition: none;
+				-moz-transition: none;
+				-ms-transition: none;
+				-o-transition: none;
+				transition: none;
+				border-bottom: 2px solid #777;
+				text-align: right;
+				background-position: center right;
+			}
+		}
+		ul {
+			&.off-canvas-list {
+				&.secondary {
+					li {
+						font-size: rem-calc(16px);
+						font-family: NewsGothicBT-Roman;
+					}
+				}
+				li {
+					font-size: rem-calc(22px);
+					font-family: NewsGothicBT-Bold;
+					&:not(.divider) {
+						padding: rem-calc(8 15, 15);
+						a:hover {
+							background: transparent
+						}
+						&.social {
+							ul {
+								margin: 0;
+								padding: 0;
+								li {
+									padding: 0;
+									margin: 0 .6rem 0 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 #shop-dwr {
-  background-color: $primary-color;
-  font-family: NewsGothicBT-Bold;
-  text-transform: uppercase;
-  padding: rem-calc(8px 12px);
-  font-size: rem-calc(12px);
-  line-height: 1em;
-  margin: 0;
+	background-color: $primary-color;
+	font-family: NewsGothicBT-Bold;
+	text-transform: uppercase;
+	padding: rem-calc(8px 12px);
+	font-size: rem-calc(12px);
+	line-height: 1em;
+	margin: 0;
 }
 
 #searchform {
-  input {
-	display: inline-block;
-	width: rem-calc(16px);
-	height: rem-calc(24px);
-	box-shadow: none;
-	padding: rem-calc(7px 0 6px 24px);
-	background: url('../assets/img/icons/icon-search.png') no-repeat 4px;
-	background-size: rem-calc(16px 16px);
-	background-color: #FFF;
-	position: absolute;
-	cursor: pointer;
-	right: 0;
-	outline: none;
-	border: none;
-	font-size: rem-calc(11px);
-	line-height: normal;
-	-webkit-transition: 0.4s ease-in-out all;
-	-moz-transition: 0.4s ease-in-out all;
-	-ms-transition: 0.4s ease-in-out all;
-	-o-transition: 0.4s ease-in-out all;
-	transition: 0.4s ease-in-out all;
-  }
-  input:focus {
-	width: rem-calc(182px);
-	background-color: $secondary-color;
-	cursor: auto;
-  }
+	input {
+		display: inline-block;
+		width: rem-calc(16px);
+		height: rem-calc(24px);
+		box-shadow: none;
+		padding: rem-calc(7px 0 6px 24px);
+		background: url('../assets/img/icons/icon-search.png') no-repeat 4px;
+		background-size: rem-calc(16px 16px);
+		background-color: #FFF;
+		position: absolute;
+		cursor: pointer;
+		right: 0;
+		outline: none;
+		border: none;
+		font-size: rem-calc(11px);
+		line-height: normal;
+		-webkit-transition: 0.4s ease-in-out all;
+		-moz-transition: 0.4s ease-in-out all;
+		-ms-transition: 0.4s ease-in-out all;
+		-o-transition: 0.4s ease-in-out all;
+		transition: 0.4s ease-in-out all;
+	}
+	input:focus {
+		width: rem-calc(182px);
+		background-color: $secondary-color;
+		cursor: auto;
+	}
 }
 
-
 article {
-  .featured-story {
-	font-family: NewsGothicBT-Bold;
-	text-transform: uppercase;
-	color: $body-font-color;
-	font-size: rem-calc(15px);
-  }
-  h2 {
-	font-size: rem-calc(24px);
-  }
-  h3.category {
-	text-transform: uppercase;
-	font-family: NewsGothicBT-Bold;
-	font-size: rem-calc(15px);
-  }
-  p {
-	font-size: rem-calc(15px);
-  }
-  .more-link {
-	text-transform: uppercase;
-	font-family: NewsGothicBT-Bold;
-  }
-  &.category-architecture {
-	> h3.category {
-	  background-color: #2fbac9;
-	  margin-bottom: rem-calc(2px);
-	  padding: rem-calc(15px 10px);
-	  line-height: rem-calc(11px);
-	  a {
-		color: #FFF;
+	.featured-story {
+		font-family: NewsGothicBT-Bold;
+		text-transform: uppercase;
+		color: $body-font-color;
 		font-size: rem-calc(15px);
-
-	  }
 	}
-	.entry-content {
-	  h3.category {
+	h2 {
+		font-size: rem-calc(24px);
+	}
+	h3.category {
+		text-transform: uppercase;
+		font-family: NewsGothicBT-Bold;
+		font-size: rem-calc(15px);
+	}
+	p {
+		font-size: rem-calc(15px);
+	}
+	.more-link {
+		text-transform: uppercase;
+		font-family: NewsGothicBT-Bold;
+		color: $dark-grey;
+	}
+	> h3.category {
+		margin-bottom: rem-calc(2px);
+		padding: rem-calc(15px 10px);
+		line-height: rem-calc(11px);
 		a {
-			color: #2fbac9;
+			color: #FFF;
+			font-size: rem-calc(15px);
+
 		}
-	  }
 	}
-  }
+	&.category-design {
+		> h3.category {
+			background-color: $design;
+		}
+		.entry-content {
+			h3.category {
+				a {
+					color: $design;
+				}
+			}
+		}
+	}
+	&.category-culture {
+		> h3.category {
+			background-color: $culture;
+		}
+		.entry-content {
+			h3.category {
+				a {
+					color: $culture;
+				}
+			}
+		}
+	}
+	&.category-people {
+		> h3.category {
+			background-color: $people;
+		}
+		.entry-content {
+			h3.category {
+				a {
+					color: $people;
+				}
+			}
+		}
+	}
+	&.category-architecture {
+		> h3.category {
+			background-color: $architecture;
+		}
+		.entry-content {
+			h3.category {
+				a {
+					color: $architecture;
+				}
+			}
+		}
+	}
 }
 
 ul.pagination {
-  font-family: NewsGothicBT-Demi;
-  font-size: rem-calc(24px);
-  color: #999;
-  li {
-	&.current {
-	  a {
-		color: #000;
-		background-color: transparent;
-	  }
+	font-family: NewsGothicBT-Demi;
+	font-size: rem-calc(24px);
+	color: #999;
+	li {
+		&.current {
+			a {
+				color: #000;
+				background-color: transparent;
+			}
+		}
 	}
-  }
 }
 
 .social-feeds {
-  .AlpinePhotoTiles_cascade_column {
-	.AlpinePhotoTiles_cascade_column_inner {
-	  margin: 0 !important;
-	  height: 153px !important;
-	  width: 153px !important;
-	  background-color: #CCC;
-	  img {
-		position:absolute;
-		left: -100%;
-		right: -100%;
-		top: -100%;
-		bottom: -100%;
-		margin: auto !important;
-		min-height: 100%;
-		min-width: 100%;
-		max-width: 100000000px !important;
-	  }
+	margin-bottom: 75px;
+	hr {
+		margin-bottom: 35px;
+		&:before {
+			position: absolute;
+			background-color: #FFF;
+			top: 7px;
+			font-size: 25px;
+			left: 50%;
+			margin-left: -22.5px;
+			line-height: 7px;
+			display: block;
+			height: auto;
+			width: auto;
+			padding: 10px;
+			text-align: center;
+		}
 	}
-  }
-  .instagram {
-	  .AlpinePhotoTiles_cascade_column_inner {
-	  }
+	.AlpinePhotoTiles_parent_class {
+		.AlpinePhotoTiles_cascade_column {
+			width: rem-calc(153) !important;
+			margin-right: 22px !important;
+			&:nth-child(3){
+				margin-right: 0 !important;
+			}
+			.AlpinePhotoTiles_cascade_column_inner {
+				margin: 0 !important;
+				height: 153px !important;
+				width: 153px !important;
+				background-color: $light-grey;
+				img {
+					position: absolute;
+					left: -100%;
+					right: -100%;
+					top: -100%;
+					bottom: -100%;
+					margin: auto !important;
+					min-height: 100%;
+					min-width: 100%;
+					max-width: 100000000px !important;
+				}
+			}
+		}
 	}
-  .tumblr {
-  }
+	.instagram {
+		hr {
+			&:before {
+				content: "\e602";
+			}
+		}
+	}
+	.tumblr {
+		hr {
+			&:before {
+				content: "\e600";
+			}
+		}
+	}
+	.twitter {
+		hr {
+			&:before {
+				content: "\e003";
+			}
+		}
+	}
+	.pinterest {
+		hr {
+			&:before {
+				content: "\e00a";
+			}
+		}
+		li.pins-feed-item {
+			margin: 0 22px 0 0;
+			&:nth-child(3){
+				margin: 0 !important;
+			}
+		}
+
+	}
 }
 
 footer {
-  h5 {
-	font-size: rem-calc(18px);
-	font-family: NewsGothicBT-Bold;
-  }
-  .social {
-	ul {
-	  font-size: rem-calc(15px);
-	  color: #ccc;
+	h5 {
+		font-size: rem-calc(18px);
+		font-family: NewsGothicBT-Bold;
 	}
-  }
+	.social {
+		ul {
+			font-size: rem-calc(22px);
+			color: $light-grey;
+		}
+	}
+}
+
+.copyright {
+	font-size: 12px;
+	color: $light-grey;
+	a {
+		color: $light-grey;
+	}
 }

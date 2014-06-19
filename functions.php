@@ -40,4 +40,10 @@ function dwr_new_row( $columns = 3, $offset = 0 ) {
 	return ( $current_iteration != $offset && ( $current_iteration != $wp_query->post_count ) && ( ( $current_iteration - $offset ) % $columns ) == 0);
 }
 
-?>
+add_filter( 'pre_get_posts', 'dwr_set_per_page' );
+function dwr_set_per_page( $query ) {
+	if ( $query->is_main_query() && is_front_page() && $query->get( 'paged' ) < 2 ) {
+		$query->set( 'posts_per_page', get_option( 'posts_per_page' ) + 1 );
+	}
+	return $query;
+}

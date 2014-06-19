@@ -2,3 +2,60 @@
  * Custom color scheme
  * ----------------------------------------------------------------------------
  */
+
+
+$design: #EFC446;
+$culture: #E4365A;
+$people: #8AC352;
+$architecture: #32BAC9;
+
+$dark-grey: #333333;
+$light-grey: #CCCCCC;
+
+[class^="icon-"], [class*=" icon-"] {
+	color: $light-grey;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.icon-facebook {
+	&:hover {
+		color: #3B5998;
+	}
+}
+
+.icon-twitter {
+	&:hover {
+		color: #00aced;
+	}
+}
+
+.icon-pinterest {
+	&:hover {
+		color: #cb2027;
+	}
+}
+
+.icon-google-plus {
+	&:hover {
+		color: #dd4b39;
+	}
+}
+
+.icon-tumblr {
+	&:hover {
+		color: #32506d;
+	}
+}
+
+.icon-houzz {
+	&:hover {
+		color: #3B5998;
+	}
+}
+.icon-instagram {
+	&:hover {
+		color: #3f729b;
+	}
+}
