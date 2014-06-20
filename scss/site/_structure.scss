@@ -50,13 +50,15 @@ header[role=banner] {
 	#desktop-menu {
 		margin-top: rem-calc(58px);
 		li {
+			padding-bottom: 3px;
 			a {
 				color: $dark-grey;
 				font-family: NewsGothicBT-Bold;
 				font-size: rem-calc(18px);
 			}
-			&.current-menu-item {
+			&.current-menu-item, &:hover {
 				border-bottom: 3px solid $dark-grey;
+				padding-bottom: 0;
 			}
 		}
 	}
