@@ -63,13 +63,13 @@
 			</ul>
 	</aside>
 
-		<header role="banner">
+		<header role="banner" class="row">
 			<div class="row">
 				<div class="small-12 columns show-for-medium-up">
 					<a href="http://www.dwr.com" target="_blank" class="right button" id="shop-dwr">Shop dwr.com &#9656;</a>
 				</div>
 			</div>
-			<div class="row collapse">
+			<div class="row">
 				<div id="logo" class="small-12 medium-4 columns">
 					<h1 class="left">
 						<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/img/dwr-logo.png"></a>
@@ -99,4 +99,4 @@
 
 		<section class="container" role="document">
 			<?php do_action( 'foundationPress_after_header' ); ?>
-			<div class="row collapse">
+			<div class="row">

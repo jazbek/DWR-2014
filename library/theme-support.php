@@ -8,7 +8,7 @@ function FoundationPress_theme_support() {
 
     // Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
     add_theme_support('post-thumbnails');
-    // set_post_thumbnail_size(150, 150, false);
+    set_post_thumbnail_size( 214, 214, true );
 	add_image_size( 'large', 1066, 662, true );
 	add_image_size( 'medium', 640, 397, true );
 
@@ -17,6 +17,8 @@ function FoundationPress_theme_support() {
 
     // Add post formarts support: http://codex.wordpress.org/Post_Formats
     add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+
+	add_theme_support( 'html5', array('caption') );
 
 }
 
