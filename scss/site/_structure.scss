@@ -93,7 +93,7 @@ header[role=banner] {
 		background-color: #FFF;
 		position: absolute;
 		cursor: pointer;
-		right: 0;
+		right: rem-calc(15);
 		outline: none;
 		border: none;
 		font-size: rem-calc(11px);
