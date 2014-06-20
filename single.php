@@ -84,12 +84,16 @@
 			<div class="row">
 				<div class="small-9 columns prev-next">
 					<hr>
+					<?php if (get_previous_post_link()) : ?>
 					<div class="left icon-carat-lt">
 						<?php previous_post_link('%link', '<h5>Previous Post</h5>%title'); ?>
 					</div>
+					<?php endif; ?>
+					<?php if(get_next_post_link()) : ?>
 					<div class="right icon-carat-rt">
 						<?php next_post_link('%link', '<h5>Next Post</h5>%title'); ?>
 					</div>
+					<?php endif; ?>
 					<div style="clear:both"></div>
 					<hr>
 				</div>
