@@ -11,7 +11,10 @@
 			</div>
 		<?php endif; ?>
 		<div class="row">
-			<div class="small-12 medium-offset-1 medium-8 columns">
+			<div class="medium-1 columns show-for-medium-up">
+				<div id="share-side"><?php get_template_part('partials/social', 'share') ?></div>
+			</div>
+			<div class="small-12 medium-8 columns">
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					<header class="row">
 						<div class="row">
@@ -54,6 +57,10 @@
 
 						<div class="row">
 							<p class="tags"><?php the_tags('TAGS: '); ?></p>
+						</div>
+
+						<div class="row show-for-small-only">
+							<div id="share-mobile"><strong>Share: </strong><?php get_template_part('partials/social', 'share') ?></div>
 							<hr>
 						</div>
 
