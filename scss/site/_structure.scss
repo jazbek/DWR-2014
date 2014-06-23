@@ -36,6 +36,17 @@ h5 {
 	font-size: rem-calc(15);
 }
 
+body.page h1.entry-title {
+	font-size: rem-calc(28);
+	padding-bottom: rem-calc(0);
+	border-bottom: 3px solid;
+	font-family: $ng-bold;
+	color: $dark-grey;
+	float: left;
+	margin-bottom: rem-calc(40);
+
+}
+
 h3 {
 	text-transform: uppercase;
 	font-size: rem-calc(15);
@@ -270,6 +281,17 @@ aside#sidebar {
  * ----------------------------------------------------------------------------
  */
 
+body.page {
+	.entry-content {
+		clear: both;
+		@media #{$small-only} {
+			.row {
+//				margin: 0;
+			}
+		}
+	}
+}
+
 #post-nav {
 	margin: 40px 0;
 	ul.pagination {
@@ -301,7 +323,7 @@ aside#sidebar {
  * ------------------------------------
  */
 
-body.home, body.archive, body.author {
+body.home, body.archive, body.author, body.page {
 	.post-list {
 		@media #{$small-only} {
 			margin: 0;
