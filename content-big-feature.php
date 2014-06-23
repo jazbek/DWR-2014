@@ -19,8 +19,8 @@
 					</div>
 					<div class="small-12 columns">
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<?php the_content(__('&#9656; Read More', 'FoundationPress')); ?>
-					</div>
+						<p><?php the_excerpt(); ?></p>
+						<p><a href="<?php the_permalink(); ?>" class="more-link"><?php echo __('&#9656; Read More', 'FoundationPress'); ?></a></p>					</div>
 				</div>
 				<div class="show-for-medium-up medium-2 columns text-right">
 					<h3 class="category"><?php the_category(', ') ?></h3>

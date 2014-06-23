@@ -33,7 +33,7 @@ require_once('library/theme-support.php');
 
 add_action('widgets_init', function(){
 	require_once('library/widgets/dwr-recent-posts.php');
-	}, 1);
+}, 1);
 
 
 /**
@@ -130,6 +130,16 @@ function dwr_product_post_type() {
 	register_post_type( 'dwr_product', $args );
 
 }
-
 // Hook into the 'init' action
 add_action( 'init', 'dwr_product_post_type', 0 );
+
+add_filter( 'excerpt_length', 'dwr_excerpt_length' );
+function dwr_excerpt_length() {
+	return 20;
+}
+
+add_filter( 'excerpt_more', 'dwr_excerpt_more' );
+function dwr_excerpt_more() {
+	return '&#8230;';
+}
+

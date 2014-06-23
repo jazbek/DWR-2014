@@ -29,7 +29,8 @@ if ( $wp_query->current_post == $wp_query->post_count - 1) {
 					<h3 class="category small-6 columns text-right"><?php echo get_the_date(); ?></h3>
 				</div>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<?php the_content(__('&#9656; Read More', 'FoundationPress')); ?>
+				<p><?php the_excerpt(); ?></p>
+				<p><a href="<?php the_permalink(); ?>" class="more-link"><?php echo __('&#9656; Read More', 'FoundationPress'); ?></a></p>
 			</div>
 		</div>
 	</article>
