@@ -30,6 +30,19 @@ button,.button,input[type=submit] {
 	padding: rem-calc(9 0);
 }
 
+
+h5 {
+	text-transform: uppercase;
+	font-size: rem-calc(15);
+}
+
+h3 {
+	text-transform: uppercase;
+	font-size: rem-calc(15);
+	font-family: $ng-bold;
+}
+
+
 /**
  * 2.0 Header, sidebar and footer
  * ----------------------------------------------------------------------------
@@ -287,7 +300,12 @@ aside#sidebar {
  * ------------------------------------
  */
 
-body.home, body.archive {
+body.home, body.archive, body.author {
+	.post-list {
+		@media #{$small-only} {
+			margin: 0;
+		}
+	}
 	article {
 		.featured-story {
 			font-family: $ng-bold;
@@ -319,6 +337,20 @@ body.home, body.archive {
 				color: #FFF;
 				font-size: rem-calc(15px);
 
+			}
+		}
+	}
+}
+
+body.author {
+	header {
+		&.author {
+			@media #{$small-only} {
+				margin: 0;
+				.author-avatar, .author-bio {
+					float: left;
+					padding-right: rem-calc(15);
+				}
 			}
 		}
 	}
@@ -359,7 +391,9 @@ body.single {
 		.entry-content {
 			margin-bottom: rem-calc(40);
 			p {
-				width: grid-calc(9,12);
+				@media #{$medium-up} {
+					width: grid-calc(9,12);
+				}
 			}
 			figure {
 				max-width: rem-calc(702px);
@@ -423,7 +457,6 @@ body.single {
 	}
 	.prev-next {
 		h5 {
-			text-transform: uppercase;
 			font-family: $ng-bold;
 		}
 		a, h5 {
@@ -580,3 +613,9 @@ body.single {
  */
 
 // Insert styles here
+
+#wpadminbar {
+	@media #{$small-only} {
+		top: -46px !important;
+	}
+}

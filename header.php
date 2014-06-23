@@ -63,40 +63,40 @@
 			</ul>
 	</aside>
 
-		<header role="banner" class="row">
-			<div class="row">
-				<div class="small-12 columns show-for-medium-up">
-					<a href="http://www.dwr.com" target="_blank" class="right button" id="shop-dwr">Shop dwr.com &#9656;</a>
+	<header role="banner" class="row">
+		<div class="row">
+			<div class="small-12 columns show-for-medium-up">
+				<a href="http://www.dwr.com" target="_blank" class="right button" id="shop-dwr">Shop dwr.com &#9656;</a>
+			</div>
+		</div>
+		<div class="row">
+			<div id="logo" class="small-12 medium-4 columns">
+				<h1 class="left">
+					<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/img/dwr-logo.png"></a>
+				</h1>
+
+				<div class="left">
+					<h2 class="subheader"><?php bloginfo( 'name' ); ?></h2>
+
+					<h3 class="subheader"><?php bloginfo( 'description' ) ?></h3>
+				</div>
+				<div class="show-for-small-only small-2 columns right">
+					<nav class="tab-bar">
+						<section class="left-small">
+							<a class="right-off-canvas-toggle menu-icon"><span></span></a>
+						</section>
+					</nav>
 				</div>
 			</div>
-			<div class="row">
-				<div id="logo" class="small-12 medium-4 columns">
-					<h1 class="left">
-						<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/img/dwr-logo.png"></a>
-					</h1>
-
-					<div class="left">
-						<h2 class="subheader"><?php bloginfo( 'name' ); ?></h2>
-
-						<h3 class="subheader"><?php bloginfo( 'description' ) ?></h3>
-					</div>
-					<div class="show-for-small-only small-2 columns right">
-						<nav class="tab-bar">
-							<section class="left-small">
-								<a class="right-off-canvas-toggle menu-icon"><span></span></a>
-							</section>
-						</nav>
-					</div>
-				</div>
-				<div id="desktop-menu" class="medium-4 columns show-for-medium-up">
-					<?php foundationPress_main_menu() ?>
-				</div>
-				<div id="desktop-search" class="medium-4 columns show-for-medium-up">
-					<?php get_search_form(); ?>
-				</div>
+			<div id="desktop-menu" class="medium-4 columns show-for-medium-up">
+				<?php foundationPress_main_menu() ?>
 			</div>
-		</header>
+			<div id="desktop-search" class="medium-4 columns show-for-medium-up">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+	</header>
 
-		<section class="container" role="document">
-			<?php do_action( 'foundationPress_after_header' ); ?>
-			<div class="row">
+	<section class="container" role="document">
+		<?php do_action( 'foundationPress_after_header' ); ?>
+		<div class="row">
