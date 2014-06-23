@@ -210,8 +210,11 @@ footer {
 			color: $light-grey;
 			margin-left: 0;
 			li {
-				padding: rem-calc(5 5 5 0);
+				padding: rem-calc(10);
 				margin: 0;
+			}
+			@media #{$small-only} {
+				padding: rem-calc(5 5 5 0);
 			}
 		}
 	}
