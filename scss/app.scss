@@ -12,6 +12,8 @@
 @import "site/structure";
 // Your site structure
 
+@import "../js/slick/slick";
+
 article {
 	&.category-design {
 		> h3.category {
@@ -115,5 +117,26 @@ article {
 			}
 		}
 
+	}
+}
+
+// SLICK SLIDER
+
+.slick-slider {
+	margin-bottom: 0;
+}
+
+.slick-dots {
+	bottom: auto;
+	top: -35px;
+	right: -3px;
+	text-align: right;
+	li {
+		margin: 0 3px;
+		button {
+			&:before {
+				font-size: 60px;
+			}
+		}
 	}
 }

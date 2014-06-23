@@ -24,6 +24,12 @@
 	text-align: center;
 }
 
+button,.button,input[type=submit] {
+	text-transform: uppercase;
+	text-align: center;
+	padding: rem-calc(9 0);
+}
+
 /**
  * 2.0 Header, sidebar and footer
  * ----------------------------------------------------------------------------
@@ -178,6 +184,10 @@ footer {
 		ul {
 			font-size: rem-calc(22px);
 			color: $light-grey;
+			li {
+				padding: rem-calc(5);
+				margin: 0;
+			}
 		}
 	}
 }
@@ -336,6 +346,14 @@ body.single {
 				time {
 					display: block;
 				}
+				@media #{$small-only} {
+					p.category {
+						text-align: left;
+					}
+				}
+				@media #{$medium-up} {
+					float: right;
+				}
 			}
 		}
 		.entry-content {
@@ -353,6 +371,9 @@ body.single {
 					color: #999999;
 					margin: rem-calc(10px 0);
 				}
+			}
+			@media #{$small-only} {
+				padding: rem-calc(0);
 			}
 		}
 		footer {
@@ -415,6 +436,7 @@ body.single {
 			color: #999;
 			position: relative;
 			padding-left: 18px;
+			text-align: left;
 			&:before {
 				position: absolute;
 				left: 0;
@@ -425,6 +447,7 @@ body.single {
 			color: $dark-grey;
 			position: relative;
 			padding-right: 18px;
+			text-align: right;
 			&:before {
 				position: absolute;
 				right: 0;
@@ -545,8 +568,11 @@ body.single {
  * ------------------------------------
  */
 
-// Insert styles here
-
+.join {
+	div.small-6 {
+		width: 48%;
+	}
+}
 
 /**
  * 4.0 Plugins

@@ -39,10 +39,13 @@
 </section>
 
 <footer class="row collapse">
-	<hr>
+	<hr class="show-for-medium-up">
 
+	<div class="small-12 columns">
+		<a class="button show-for-small-only" href="<?php echo home_url() ?>">Back to Main</a>
+	</div>
 	<?php do_action('foundationPress_before_footer'); ?>
-	<div class="small-12 medium-4 columns">
+	<div class="footer-nav small-6 medium-4 columns">
 		<?php
 		wp_nav_menu(array(
 				'container' => false,                           // remove nav container
@@ -59,15 +62,36 @@
 			));
 		?>
 	</div>
-	<div class="social small-12 medium-4 columns">
+	<div class="social small-6 medium-4 columns">
 		<h5>Follow:</h5>
-		<?php get_template_part('partials/social', 'inline-list') ?>
+		<?php get_template_part('partials/social', 'profiles') ?>
 	</div>
 	<div class="join small-12 medium-4 columns">
 		<h5>Join our email list.</h5>
+		<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onSubmit="return checkEmail(this)">
+
+			<input type=hidden name="oid" value="00DA0000000L9e8">
+			<input type=hidden name="retURL" value="http://www.urlgoeshere.com">
+			<input type=hidden name="first_name" value= 'Email'>
+			<input type=hidden name="last_name" value= 'Subsriber'>
+			<input type=hidden name="company" value= 'Email Subsriber'>
+			<input type=hidden name="recordType" value="012F0000000qKdL">
+			<input type=hidden name="lead_source" value='Email Subscribe-Footer'>
+
+			<input class="text small-12" id="email" maxlength="80" name="email" type="text" value="Enter Email Address" onFocus="clearText(this)" onBlur="clearText(this)"/>
+				<div class="row collapse">
+				<div class="small-6 columns">
+					<input class="text" id="zip" maxlength="20" name="zip" type="text" value="Enter Zip" onFocus="clearText(this)" onBlur="clearText(this)" maxlength="5" />
+				</div>
+				<div class="small-6 columns">
+					<input class="button small-12" type="submit" name="submit" value="submit">
+				</div>
+			</div>
+
+		</form>
 	</div>
 	<?php do_action('foundationPress_after_footer'); ?>
-	<div class="small-12 columns end">
+	<div class="small-6 columns end">
 		<p><span class="copyright">&copy; <?php echo date('Y') ?> <a href="http://www.dwr.com" target="_blank">Design Within Reach</a></span></p>
 	</div>
 </footer>

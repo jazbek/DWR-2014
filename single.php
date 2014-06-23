@@ -12,46 +12,27 @@
 		<?php endif; ?>
 		<div class="row">
 			<div class="medium-1 columns show-for-medium-up">
-				<div id="share-side"><?php get_template_part('partials/social', 'share') ?></div>
+				<div id="share-side"><?php get_template_part('partials/social-share', 'desktop') ?></div>
 			</div>
 			<div class="small-12 medium-8 columns">
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					<header class="row">
 						<div class="row">
-							<h1 class="entry-title small-12 medium-9 columns"><?php the_title(); ?></h1>
 							<div class="entry-meta small-12 medium-3 columns">
 								<?php get_template_part('partials/entry-meta', 'single') ?>
 							</div>
+							<h1 class="entry-title small-12 medium-9 columns"><div class="small-12 columns"><?php the_title(); ?></div></h1>
 						</div>
 					</header>
 					<?php do_action('foundationPress_post_before_entry_content'); ?>
 					<div class="entry-content row">
-						<?php the_content(); ?>
+						<div class="small-12 columns">
+							<?php the_content(); ?>
+						</div>
 					</div>
-					<footer>
+					<footer class="small-12 columns">
 
-						<?php if ( $products = get_field('products') ) : ?>
-							<aside id="products" class="row">
-								<h3>Product List:</h3>
-								<div class="row">
-									<?php foreach ( $products as $i => $product ) : ?>
-										<div class="medium-4 columns">
-											<?php if ( $product_url = get_field( 'product_url', $product->ID ) ) : ?>
-												<a href="<?php echo $product_url; ?>" target="_blank"><?php echo get_the_post_thumbnail( $product->ID, 'post-thumbnail' ); ?></a>
-												<h4><?php echo get_the_title( $product->ID ); ?></h4>
-												<?php if ( $designer = get_field( 'designer', $product->ID ) ) : ?>
-													<p>Designed by <?php echo $designer; ?></p>
-												<?php endif; ?>
-											<?php endif; ?>
-										</div>
-										<?php if ( dwr_new_row(3, 0, $i, count($products)) ) : ?>
-											</div>
-											<div class="row">
-										<?php endif; ?>
-									<?php endforeach; ?>
-								</div>
-							</aside>
-						<?php endif; ?>
+						<?php get_template_part('partials/products', 'single') ?>
 
 						<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'FoundationPress'), 'after' => '</p></nav>' )) ?>
 
@@ -60,54 +41,43 @@
 						</div>
 
 						<div class="row show-for-small-only">
-							<div id="share-mobile"><strong>Share: </strong><?php get_template_part('partials/social', 'share') ?></div>
-							<hr>
+							<div id="share-mobile"><?php get_template_part('partials/social-share', 'mobile') ?></div>
 						</div>
 
-						<?php $related_stories = dwr_get_related_stories(); ?>
-						<?php if ( count( $related_stories ) ) : ?>
-							<aside id="related-stories" class="row">
-								<h3>Related Stories:</h3>
-								<div class="row">
-									<?php foreach ( $related_stories as $i => $story ) : ?>
-									<div class="medium-4 columns">
-										<a href="<?php echo get_permalink( $story->ID ); ?>"><?php echo get_the_post_thumbnail( $story->ID, 'medium' ); ?></a>
-										<p><a href="<?php echo get_permalink( $story->ID ); ?>"><?php echo get_the_title( $story->ID ) ?></a></p>
-									</div>
-									<?php if ( dwr_new_row(3, 0, $i, count( $related_stories ) ) ) : ?>
-								</div>
-								<div class="row">
-									<?php endif; ?>
-									<?php endforeach; ?>
-								</div>
-							</aside>
-						<?php endif; ?>
+						<hr class="row">
+
+						<br>
+						<br>
+
+						<?php get_template_part('partials/related-stories', 'single'); ?>
+
 					</footer>
 				</article>
 			</div>
-			<div class="small-3 columns">
+			<div class="medium-3 columns show-for-medium-up">
 				<?php get_sidebar(); ?>
 			</div>
-			<div class="row">
-				<div class="small-9 columns prev-next">
-					<hr>
-					<?php if (get_previous_post_link()) : ?>
-					<div class="left icon-carat-lt">
-						<?php previous_post_link('%link', '<h5>Previous Post</h5>%title'); ?>
-					</div>
-					<?php endif; ?>
-					<?php if(get_next_post_link()) : ?>
-					<div class="right icon-carat-rt">
-						<?php next_post_link('%link', '<h5>Next Post</h5>%title'); ?>
-					</div>
-					<?php endif; ?>
-					<div style="clear:both"></div>
-					<hr>
+			<div class="small-12 medium-9 prev-next columns">
+				<hr>
+				<?php if (get_previous_post_link()) : ?>
+				<div class="left icon-carat-lt">
+					<?php previous_post_link('%link', '<h5>Previous Post</h5>%title'); ?>
 				</div>
+				<?php endif; ?>
+				<?php if(get_next_post_link()) : ?>
+				<div class="right icon-carat-rt">
+					<?php next_post_link('%link', '<h5>Next Post</h5>%title'); ?>
+				</div>
+				<?php endif; ?>
+				<div style="clear:both"></div>
+				<hr class="show-for-medium-up">
+				<div class="show-for-small-only" style="height: 40px;"></div>
 			</div>
-			<?php do_action('foundationPress_post_before_comments'); ?>
-			<?php comments_template(); ?>
-			<?php do_action('foundationPress_post_after_comments'); ?>
+			<div class="show-for-medium-up medium-9 columns end">
+				<?php do_action('foundationPress_post_before_comments'); ?>
+				<?php comments_template(); ?>
+				<?php do_action('foundationPress_post_after_comments'); ?>
+			</div>
 
 		</div>
 	<?php endwhile;?>
