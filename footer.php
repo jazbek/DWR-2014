@@ -20,7 +20,7 @@
 					setTimeout(function() {
 						var head = $('#twitter-widget-0').contents().find('head');
 						var css = '<style type="text/css">' +
-							'.var-chromeless .tweet { padding: 0; } ' +
+							'.var-chromeless .tweet { padding: 0 !important; } ' +
 							'.tweet * { display: none; } ' +
 							'.tweet .e-entry-content, .tweet .e-entry-content .e-entry-title { display: block; color: #FFF; font-size: 18px; line-height: 2em; } ' +
 							'</style>';
