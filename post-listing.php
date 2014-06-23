@@ -3,7 +3,7 @@
 	<?php if ( have_posts() ) : ?>
 		<?php do_action('foundationPress_before_content'); ?>
 		<?php $offset = (int) (is_front_page() && $wp_query->get('paged') < 2) ?>
-		<div class="row" data-equalizer>
+		<div class="row" <?php echo $offset ? '' : 'data-equalizer' ?>>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php if ( dwr_new_row( 3, $offset ) ) : ?>
