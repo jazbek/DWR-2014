@@ -94,7 +94,7 @@ function dwr_get_related_stories() {
 function dwr_product_post_type() {
 
 	$labels = array(
-		'name'                => _x( 'Products', 'Post Type General Name', 'dwr' ),
+		'name'                => _x( 'DWR Products', 'Post Type General Name', 'dwr' ),
 		'singular_name'       => _x( 'Product', 'Post Type Singular Name', 'dwr' ),
 		'menu_name'           => __( 'DWR Products', 'dwr' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'dwr' ),
